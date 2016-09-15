@@ -1,0 +1,27 @@
+{
+  "name": "zlogjs-express-logger",
+  "version": "0.0.0",
+  "description": "log express requests and responses locally or on a remote server.",
+  "main": "./lib/logger.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "express",
+    "logs",
+    "logger",
+    "zlogjs",
+    "logger",
+    "zlogjs",
+    "logs",
+    "zlogjs-express",
+    "zlogjs-express-logger"
+  ],
+  "author": "zeeshan <zeeshan.emallates@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "on-finished": "^2.3.0",
+    "on-headers": "^1.0.1"
+  }
+}
