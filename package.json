@@ -1,6 +1,6 @@
 {
   "name": "zlogjs-express-logger",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "log express requests and responses locally or on a remote server.",
   "main": "./lib/logger.js",
   "scripts": {
