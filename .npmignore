@@ -29,5 +29,5 @@ node_modules
 # Test Manual
 ctest.js
 opt.json
-test.js
+org_test.js
 
