@@ -26,6 +26,8 @@ Table of Contents
 
 1. [Installation](#installation)
 1. [Configuration](#configuration)
+    - [Skip](#skip)
+	- [Tags](#tags)
 1. [Log](#log)
 	- [Global](#global)
 	- [Specific](#specific)
@@ -50,6 +52,48 @@ var config = {
 			adapter:require('zlogjs-adapter'), plugin:'zlogjs-express-logger',
 			appId:'appid', apiKey:'apikey',
 			mode:'remote'
+		}
+	}
+};
+```
+#### Skip
+```javascript
+var config = {
+	collections:{
+		adapter:{
+			host:'host', port:'port',
+			adapter:require('zlogjs-adapter'), plugin:'zlogjs-express-logger',
+			appId:'appid', apiKey:'apikey',
+			mode:'remote',
+			SKIP:{
+			  '/api1':true, 
+			  '/api2':{CODE:204},
+			  '/api4':{METHOD:'get'},
+			  '/api6':{CODE:{'>':200,'<':300}}
+			},
+			SKIP_CODE:400
+		}
+	}
+};
+ 
+```
+#### Tags
+```javascript
+var config = {
+	collections:{
+		adapter:{
+		host:'host', port:'port',
+		adapter:require('zlogjs-adapter'), plugin:'zlogjs-express-logger',
+		appId:'appid', apiKey:'apikey',
+		mode:'remote',
+			TAGS:{
+				"/api/a":"tag1",
+				"/api/b":"tag1:tvalue",
+				"/api/c":["tag1:tvalue","tag2:tvalue"],
+				"/api/d":["tag1","tag2"],
+				"/api/e":{"tag1":"tvalue","tag2":"tvalue"},
+				"splitter":":"
+			}
 		}
 	}
 };
