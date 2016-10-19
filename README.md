@@ -20,12 +20,19 @@ log express request, response, locally or on a remote server.
 ##DESCRIPTION
 zlogjs-express-logger is a plugin for zlogjs-adapter to log native http server requests and responses.
 
-## Table of Contents
+<!--NO_HTML-->
+Table of Contents
+-----------------
+
 1. [Installation](#installation)
-2. [Configuration](#configuration)
-3. [Log](#log)
-4. [Issues and Suggestions](#issues-and-suggestions)
-5. [License](#license)
+1. [Configuration](#configuration)
+1. [Log](#log)
+	- [Global](#global)
+	- [Specific](#specific)
+1. [Issues and Suggestions](#issues-and-suggestions)
+1. [License](#license)
+
+<!--/NO_HTML-->
 
 ## Installation
 ```bash
@@ -52,13 +59,13 @@ var config = {
 To start using this logger you need to construct it from [zlogjs-adapter](https://github.com/Emallates/zlogjs-adapter) and [enoa-client](https://github.com/Emallates/enoa-client).
 Then you need to include it  as a middleware of the express application. 
 
-### Global
+#### Global
 ```javascript
 var logger = require('enoa-client')(config).adapter.logger;
 express_app.use(logger);
 ```
 
-### Specific
+#### Specific
 you need to add an additional header `x-man-zlogjs` to the request object if you manually log something
 ```javascript
 //req.headers['x-man-zlogjs'] = true;
